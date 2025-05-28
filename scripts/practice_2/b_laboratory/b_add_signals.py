@@ -10,7 +10,7 @@ class Window(QtWidgets.QWidget):
 
         self.initUi()
         # TODO: Вызвать метод с инициализацией сигналов
-
+        self.__initSignals()
     def initUi(self) -> None:
         """
         Инициализация интерфейса
@@ -132,7 +132,7 @@ class Window(QtWidgets.QWidget):
         :return: None
         """
 
-        self.pushButtonComboBox  # TODO подключить слот для вывода текста из comboBox в plainTextEditLog при нажатии на кнопку
+        self.pushButtonComboBox = QtWidgets.QPushButton # TODO подключить слот для вывода текста из comboBox в plainTextEditLog при нажатии на кнопку
         self.pushButtonLineEdit.clicked.connect(self.onPushButtonLineEditClicked)
         self.pushButtonTextEdit  # TODO подключить слот для вывода текста из textEdit в plainTextEditLog при нажатии на кнопку
         self.pushButtonPlainTextEdit  # TODO подключить слот для вывода текста из plaineTextEdit в plainTextEditLog при нажатии на кнопку
